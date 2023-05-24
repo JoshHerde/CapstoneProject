@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AppointmentsController">
+   <children>
+      <Label layoutX="33.0" layoutY="36.0" text="Appointments">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Label>
+      <TableView fx:id="appointmentsTable" layoutX="33.0" layoutY="125.0" prefHeight="421.0" prefWidth="1039.0">
+        <columns>
+          <TableColumn fx:id="idCol" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="titleCol" prefWidth="94.0" text="Title" />
+            <TableColumn fx:id="descCol" prefWidth="183.0" text="Description" />
+            <TableColumn fx:id="locCol" prefWidth="104.0" text="Location" />
+            <TableColumn fx:id="contactCol" prefWidth="104.0" text="Contact" />
+            <TableColumn fx:id="typeCol" prefWidth="142.0" text="Type" />
+            <TableColumn fx:id="startCol" prefWidth="84.0" text="Start" />
+            <TableColumn fx:id="endCol" prefWidth="86.0" text="End" />
+            <TableColumn fx:id="customerIdCol" prefWidth="95.0" text="Customer ID" />
+            <TableColumn fx:id="userIdCol" prefWidth="71.0" text="User ID" />
+        </columns>
+      </TableView>
+      <RadioButton fx:id="monthRadioButton" layoutX="586.0" layoutY="68.0" mnemonicParsing="false" onAction="#monthRbClicked" prefHeight="17.0" prefWidth="79.0" text="Month">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="appointmentsToggleGroup" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="weekRadioButton" layoutX="666.0" layoutY="68.0" mnemonicParsing="false" onAction="#weekRbClicked" text="Week" toggleGroup="$appointmentsToggleGroup">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </RadioButton>
+      <Button layoutX="929.0" layoutY="62.0" mnemonicParsing="false" onAction="#newAppointmentClicked" prefHeight="25.0" prefWidth="143.0" style="-fx-background-color: #29b6f6; -fx-border-color: black;" text="+Add New" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="744.0" layoutY="45.0" mnemonicParsing="false" onAction="#editAppointmentClicked" prefHeight="25.0" prefWidth="143.0" text="Edit Appointment" />
+      <Button layoutX="744.0" layoutY="84.0" mnemonicParsing="false" onAction="#deleteAppointmentClicked" prefHeight="25.0" prefWidth="143.0" text="Delete Appointment" />
+      <Button layoutX="1019.0" layoutY="561.0" mnemonicParsing="false" onAction="#exitButtonClicked" prefHeight="25.0" prefWidth="53.0" text="Exit" />
+      <Button layoutX="33.0" layoutY="558.0" mnemonicParsing="false" onAction="#customerButtonClicked" prefHeight="25.0" prefWidth="143.0" style="-fx-background-color: #b7ffbf; -fx-border-color: black;" text="Customers">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <RadioButton fx:id="allRadioButton" layoutX="532.0" layoutY="69.0" mnemonicParsing="false" onAction="#allRbClicked" text="All" toggleGroup="$appointmentsToggleGroup">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </RadioButton>
+      <Button layoutX="487.0" layoutY="558.0" mnemonicParsing="false" onAction="#reportsButtonClicked" prefHeight="32.0" prefWidth="126.0" style="-fx-background-color: fcf47c; -fx-border-color: black;" text="Reports">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

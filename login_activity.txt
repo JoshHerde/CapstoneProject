@@ -1,0 +1,11 @@
+On this date and time: 2022-08-19T17:35:22.806256500, Username: tony - was denied access.
+On this date and time: 2022-08-19T17:35:25.983151900, Username: ryan - was denied access.
+On this date and time: 2022-08-19T17:35:28.897416800, Username: josh - was denied access.
+On this date and time: 08-19-2022 17:37, Username: ryan - was denied access.
+On this date and time: 08-20-2022 02:53, Username: test - successfully logged in.
+On this date and time: 08-20-2022 02:56, Username: josh - was denied access.
+On this date and time: 05-11-2023 16:08, Username: Username - was denied access.
+On this date and time: 05-11-2023 16:08, Username: test - successfully logged in.
+On this date and time: 05-12-2023 16:17, Username: Username - was denied access.
+On this date and time: 05-12-2023 16:17, Username: test - successfully logged in.
+On this date and time: 05-16-2023 13:37, Username: test - successfully logged in.

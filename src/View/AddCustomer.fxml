@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AddCustomerController">
+   <children>
+      <Label layoutX="149.0" layoutY="42.0" text="Add Customer">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="109.0" layoutY="131.0" text="Customer ID" />
+      <Label layoutX="42.0" layoutY="170.0" text="Name" />
+      <Label layoutX="42.0" layoutY="214.0" text="Address" />
+      <Label layoutX="42.0" layoutY="260.0" text="Postal Code" />
+      <Label layoutX="42.0" layoutY="304.0" text="Phone Number" />
+      <Label layoutX="42.0" layoutY="341.0" text="Country" />
+      <Label layoutX="42.0" layoutY="380.0" text="Division" />
+      <TextField editable="false" layoutX="206.0" layoutY="127.0" promptText="Auto Gen - Disabled" />
+      <TextField fx:id="nameTextField" layoutX="126.0" layoutY="166.0" prefWidth="340.0" />
+      <TextField fx:id="addressTextField" layoutX="126.0" layoutY="210.0" prefWidth="340.0" />
+      <TextField fx:id="postalCodeTextField" layoutX="126.0" layoutY="256.0" prefWidth="340.0" />
+      <TextField fx:id="phoneTextField" layoutX="126.0" layoutY="300.0" prefWidth="340.0" />
+      <ComboBox fx:id="countryComboBox" layoutX="126.0" layoutY="337.0" onAction="#countryComboBoxClicked" prefHeight="25.0" prefWidth="200.0" />
+      <ComboBox fx:id="divisionComboBox" layoutX="126.0" layoutY="376.0" prefWidth="200.0" />
+      <Button layoutX="358.0" layoutY="553.0" mnemonicParsing="false" onAction="#saveButtonClicked" text="Save" />
+      <Button layoutX="414.0" layoutY="553.0" mnemonicParsing="false" onAction="#cancelButtonClicked" text="Cancel" />
+   </children>
+</AnchorPane>

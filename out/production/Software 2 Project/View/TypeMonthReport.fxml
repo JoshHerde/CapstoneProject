@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TypeMonthReportController">
+   <children>
+      <Label layoutX="33.0" layoutY="36.0" text="Appointments by Type and Month">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TableView fx:id="typeMonthTable" layoutX="17.0" layoutY="98.0" prefHeight="354.0" prefWidth="769.0">
+        <columns>
+          <TableColumn fx:id="typeCol" prefWidth="127.0" text="Type" />
+          <TableColumn fx:id="monthCol" prefWidth="518.0" text="Month" />
+            <TableColumn fx:id="totalCol" prefWidth="123.0" text="Total" />
+        </columns>
+      </TableView>
+      <Button layoutX="717.0" layoutY="461.0" mnemonicParsing="false" onAction="#backButtonClicked" prefHeight="25.0" prefWidth="41.0" text="Back" />
+   </children>
+</AnchorPane>

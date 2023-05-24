@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-border-color: blue;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddProductController">
+    <children>
+        <AnchorPane layoutX="23.0" layoutY="65.0" prefHeight="515.0" prefWidth="738.0" style="-fx-border-color: black; -fx-background-radius: 10;">
+            <children>
+                <Label layoutX="40.0" layoutY="40.0" text="Add Product">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font></Label>
+                <TableView fx:id="partTableView" layoutX="372.0" layoutY="60.0" prefHeight="158.0" prefWidth="339.0">
+                    <columns>
+                        <TableColumn fx:id="partIdColumn" prefWidth="44.0" text="Part ID" />
+                        <TableColumn fx:id="partNameColumn" prefWidth="68.0" text="Part Name" />
+                        <TableColumn fx:id="partInventoryColumn" prefWidth="100.0" text="Inventory Level" />
+                        <TableColumn fx:id="partPriceColumn" prefWidth="126.0" text="Price / Cost per Unit" />
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+                <TableView fx:id="associatedPartTableView" layoutX="372.0" layoutY="277.0" prefHeight="158.0" prefWidth="339.0">
+                    <columns>
+                        <TableColumn fx:id="associatedPartIdColumn" prefWidth="44.0" text="Part ID" />
+                        <TableColumn fx:id="associatedPartNameColumn" prefWidth="66.0" text="Part Name" />
+                        <TableColumn fx:id="associatedPartInventoryColumn" prefWidth="104.0" text="Inventory Level" />
+                        <TableColumn fx:id="associatedPartPriceColumn" prefWidth="124.0" text="Price / Cost per Unit" />
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+                <Button fx:id="addAssociatedPart" layoutX="630.0" layoutY="233.0" mnemonicParsing="false" onAction="#addButtonClicked" text="Add" />
+                <Button fx:id="removeAssociatedPart" layoutX="550.0" layoutY="443.0" mnemonicParsing="false" onAction="#removeButtonClicked" prefHeight="25.0" prefWidth="151.0" text="Remove Associated Part" />
+                <Button layoutX="585.0" layoutY="478.0" mnemonicParsing="false" onAction="#saveButtonClicked" text="Save" />
+                <Button layoutX="649.0" layoutY="478.0" mnemonicParsing="false" onAction="#cancelButtonClicked" text="Cancel" />
+                <TextField fx:id="partSearch" layoutX="517.0" layoutY="21.0" onKeyPressed="#partSearchClicked" prefHeight="25.0" prefWidth="194.0" promptText="Search by Part ID or Name">
+                    <font>
+                        <Font name="System Italic" size="12.0" />
+                    </font>
+                </TextField>
+                <Label layoutX="54.0" layoutY="107.0" text="ID" />
+                <Label layoutX="54.0" layoutY="145.0" text="Name" />
+                <Label layoutX="54.0" layoutY="178.0" text="Inventory" />
+                <Label layoutX="54.0" layoutY="210.0" text="Price" />
+                <Label layoutX="55.0" layoutY="242.0" text="Max" />
+                <Label layoutX="184.0" layoutY="242.0" text="Min" />
+                <TextField fx:id="productId" editable="false" layoutX="110.0" layoutY="103.0" promptText="Auto Gen - Disabled">
+                    <font>
+                        <Font name="System Italic" size="12.0" />
+                    </font></TextField>
+                <TextField fx:id="productName" layoutX="110.0" layoutY="141.0" />
+                <TextField fx:id="productInventory" layoutX="110.0" layoutY="174.0" prefHeight="25.0" prefWidth="66.0" />
+                <TextField fx:id="productPrice" layoutX="110.0" layoutY="206.0" prefHeight="25.0" prefWidth="66.0" />
+                <TextField fx:id="productMax" layoutX="110.0" layoutY="238.0" prefHeight="25.0" prefWidth="66.0" />
+                <TextField fx:id="productMin" layoutX="213.0" layoutY="238.0" prefHeight="25.0" prefWidth="66.0" />
+            </children></AnchorPane>
+    </children>
+</AnchorPane>

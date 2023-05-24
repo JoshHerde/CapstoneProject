@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="1024.0" style="-fx-border-color: blue; -fx-border-width: 3;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainScreen">
+   <children>
+      <AnchorPane layoutX="56.0" layoutY="75.0" prefHeight="250.0" prefWidth="400.0" style="-fx-border-color: black; -fx-border-radius: 5;">
+         <children>
+            <TableView fx:id="partTableView" layoutX="6.0" layoutY="39.0" prefHeight="174.0" prefWidth="387.0">
+               <columns>
+                  <TableColumn fx:id="partIdColumn" prefWidth="75.0" text="Part ID" />
+                  <TableColumn fx:id="partNameColumn" prefWidth="75.0" text="Part Name" />
+                  <TableColumn fx:id="partInventoryColumn" prefWidth="97.0" text="Inventory Level" />
+                  <TableColumn fx:id="partPriceColumn" prefWidth="139.0" text="Price / Cost per Unit" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <Button layoutX="224.0" layoutY="219.0" mnemonicParsing="false" onAction="#partAddClicked" text="Add" />
+            <Button layoutX="272.0" layoutY="219.0" mnemonicParsing="false" onAction="#partModifyClicked" text="Modify" />
+            <Button layoutX="334.0" layoutY="219.0" mnemonicParsing="false" onAction="#partDeleteClicked" text="Delete" />
+            <TextField fx:id="partSearch" layoutX="191.0" layoutY="8.0" onKeyPressed="#partSearchClicked" prefHeight="25.0" prefWidth="183.0" promptText="Search by Part ID or Name">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font></TextField>
+            <Label layoutX="26.0" layoutY="11.0" text="Parts">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <AnchorPane layoutX="573.0" layoutY="75.0" prefHeight="250.0" prefWidth="400.0" style="-fx-border-radius: 5; -fx-border-color: black;">
+         <children>
+            <TableView fx:id="productTableView" layoutX="7.0" layoutY="38.0" prefHeight="174.0" prefWidth="387.0">
+               <columns>
+                  <TableColumn fx:id="productIdColumn" prefWidth="75.0" text="Product ID" />
+                  <TableColumn fx:id="productNameColumn" prefWidth="88.0" text="Product Name" />
+                  <TableColumn fx:id="productInventoryColumn" prefWidth="93.0" text="Inventory Level" />
+                  <TableColumn fx:id="productPriceColumn" minWidth="8.0" prefWidth="130.0" text="Price / Cost per Unit" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <Button layoutX="225.0" layoutY="218.0" mnemonicParsing="false" onAction="#productAddClicked" text="Add" />
+            <Button layoutX="269.0" layoutY="218.0" mnemonicParsing="false" onAction="#productModifyClicked" text="Modify" />
+            <Button layoutX="329.0" layoutY="218.0" mnemonicParsing="false" onAction="#productDeleteClicked" text="Delete" />
+            <TextField fx:id="productSearch" layoutX="197.0" layoutY="7.0" onKeyPressed="#productSearchClicked" prefHeight="25.0" prefWidth="183.0" promptText="Search by Product ID or Name">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font></TextField>
+            <Label layoutX="29.0" layoutY="10.0" style="-fx-font-weight: bold" text="Products" />
+         </children></AnchorPane>
+      <Button layoutX="868.0" layoutY="343.0" mnemonicParsing="false" onAction="#exitButtonClicked" prefHeight="35.0" prefWidth="54.0" text="Exit" />
+      <Label layoutX="41.0" layoutY="32.0" style=" -fx-font-weight: bold" text="Inventory Management System">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+
+   </children>
+</AnchorPane>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CustomersController">
+   <children>
+      <Label layoutX="33.0" layoutY="36.0" text="Customers">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Label>
+      <TableView fx:id="customersTable" layoutX="33.0" layoutY="125.0" prefHeight="421.0" prefWidth="1039.0">
+        <columns>
+          <TableColumn fx:id="customerIDCol" prefWidth="39.0" text="ID" />
+          <TableColumn fx:id="customerNameCol" prefWidth="134.0" text="Name" />
+            <TableColumn fx:id="customerAddressCol" minWidth="0.0" prefWidth="384.0" text="Address" />
+            <TableColumn fx:id="customerPostalCol" prefWidth="101.0" text="Postal" />
+            <TableColumn fx:id="customerPhoneCol" minWidth="0.0" prefWidth="145.0" text="Phone" />
+            <TableColumn fx:id="customerCountryCol" minWidth="5.0" prefWidth="120.0" text="Country" />
+            <TableColumn fx:id="customerDivisionCol" minWidth="5.0" prefWidth="115.0" text="Division" />
+        </columns>
+      </TableView>
+      <Button layoutX="929.0" layoutY="62.0" mnemonicParsing="false" onAction="#newCustomerClicked" prefHeight="25.0" prefWidth="143.0" style="-fx-background-color: #29b6f6; -fx-border-color: black;" text="+Add New" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Button layoutX="744.0" layoutY="45.0" mnemonicParsing="false" onAction="#editCustomerClicked" prefHeight="25.0" prefWidth="143.0" text="Edit Customer" />
+      <Button layoutX="744.0" layoutY="84.0" mnemonicParsing="false" onAction="#deleteCustomerClicked" prefHeight="25.0" prefWidth="143.0" text="Delete Customer" />
+      <Button layoutX="1019.0" layoutY="561.0" mnemonicParsing="false" onAction="#backButtonClicked" prefHeight="25.0" prefWidth="53.0" text="Back" />
+   </children>
+</AnchorPane>

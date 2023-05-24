@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CustomerApptsReportController">
+   <children>
+      <Label layoutX="33.0" layoutY="36.0" text="Schedule for each Customer">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TableView fx:id="customerTable" layoutX="17.0" layoutY="98.0" prefHeight="354.0" prefWidth="769.0">
+        <columns>
+          <TableColumn fx:id="IdColumn" prefWidth="42.0" text="ID" />
+          <TableColumn fx:id="titleColumn" prefWidth="118.0" text="Title" />
+            <TableColumn fx:id="typeColumn" prefWidth="142.0" text="Type" />
+            <TableColumn fx:id="descriptionColumn" prefWidth="175.0" text="Description" />
+            <TableColumn fx:id="startColumn" prefWidth="116.0" text="Start" />
+            <TableColumn fx:id="endColumn" prefWidth="82.0" text="End" />
+            <TableColumn fx:id="customerIdColumn" prefWidth="93.0" text="Customer ID " />
+        </columns>
+      </TableView>
+      <Button layoutX="717.0" layoutY="461.0" mnemonicParsing="false" onAction="#backButtonClicked" prefHeight="25.0" prefWidth="41.0" text="Back" />
+      <ComboBox fx:id="customerComboBox" layoutX="536.0" layoutY="39.0" onAction="#customerComboClicked" prefWidth="150.0" promptText="Select Customer" />
+   </children>
+</AnchorPane>
