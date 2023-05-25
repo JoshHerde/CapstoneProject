@@ -4,6 +4,7 @@ import DAO_DBAccess.AppointmentsDAO;
 import DAO_DBAccess.CustomersDAO;
 import Model.Appointments;
 import Model.Customers;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -34,6 +35,7 @@ public class CustomersController implements Initializable {
     @FXML private TableColumn<Customers, String> customerPhoneCol;
     @FXML private TableColumn<Customers, String> customerCountryCol;
     @FXML private TableColumn<Customers, Integer> customerDivisionCol;
+    @FXML private TextField customerSearch;
 
     /**
      * The customer selected to modify.
@@ -142,6 +144,19 @@ public class CustomersController implements Initializable {
         stage.show();
     }
 
+    public void customerSearchClicked(ActionEvent actionEvent) {
+        ObservableList<Customers> daoCustomerList = CustomersDAO.getAllCustomers(); // All customers list
+        ObservableList<Customers> searchedCustomers = FXCollections.observableArrayList();
+        String searchString = customerSearch.getText().toLowerCase();
+        for (Customers c : daoCustomerList) {
+            if (c.getName().toLowerCase().contains(searchString) || c.getAddress().toLowerCase().contains(searchString) || c.getPostalCode().contains(searchString) ||
+                    c.getPhone().contains(searchString)) {
+                searchedCustomers.add(c);
+            }
+        }
+        customersTable.setItems(searchedCustomers);
+    }
+
 
     /**
      * Initializes the controller.
@@ -162,6 +177,7 @@ public class CustomersController implements Initializable {
 
 
     }
+
 
 
 }

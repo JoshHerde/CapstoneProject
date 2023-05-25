@@ -28,5 +28,9 @@
       <Button layoutX="744.0" layoutY="45.0" mnemonicParsing="false" onAction="#editCustomerClicked" prefHeight="25.0" prefWidth="143.0" text="Edit Customer" />
       <Button layoutX="744.0" layoutY="84.0" mnemonicParsing="false" onAction="#deleteCustomerClicked" prefHeight="25.0" prefWidth="143.0" text="Delete Customer" />
       <Button layoutX="1019.0" layoutY="561.0" mnemonicParsing="false" onAction="#backButtonClicked" prefHeight="25.0" prefWidth="53.0" text="Back" />
+      <TextField fx:id="customerSearch" layoutX="33.0" layoutY="84.0" onAction="#customerSearchClicked" prefHeight="25.0" prefWidth="380.0" promptText="Search...">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font></TextField>
    </children>
 </AnchorPane>

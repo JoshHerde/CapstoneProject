@@ -3,12 +3,14 @@ package Controller;
 
 import DAO_DBAccess.AppointmentsDAO;
 import DAO_DBAccess.ContactsDAO;
+import DAO_DBAccess.CustomersDAO;
 import DAO_DBAccess.UsersDAO;
 import Model.Appointments;
 import Model.Customers;
 import Model.Users;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -22,7 +24,9 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.time.LocalDateTime;
+import java.util.Locale;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
@@ -49,6 +53,7 @@ public class AppointmentsController implements Initializable {
     @FXML private RadioButton allRadioButton;
     @FXML private RadioButton monthRadioButton;
     @FXML private RadioButton weekRadioButton;
+    @FXML private TextField apptSearch;
 
 
     /**
@@ -209,6 +214,34 @@ public class AppointmentsController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
+
+    @FXML void apptSearchClicked(ActionEvent actionEvent) throws SQLException {
+        ObservableList<Appointments> daoAppointmentsList = AppointmentsDAO.getAllAppointments(); // All appointments list
+        ObservableList<Appointments> searchedAppointments = FXCollections.observableArrayList();
+        String searchString = apptSearch.getText().toLowerCase();
+        for (Appointments a : daoAppointmentsList) {
+            if (a.getTitle().toLowerCase().contains(searchString) || a.getDescription().toLowerCase().contains(searchString) || a.getLocation().contains(searchString) ||
+                    a.getType().contains(searchString)) {
+                searchedAppointments.add(a);
+            }
+        }
+        appointmentsTable.setItems(searchedAppointments);
+    }
+
+    /*
+    @FXML void apptSearchClicked(ActionEvent actionEvent) {
+        String searchString = apptSearch.getText();
+        if (searchString.matches("\\d+")) {
+            int id = Integer.parseInt(searchString);
+            Appointments searchAppts = AppointmentsDAO.lookupApptID(id);
+            appointmentsTable.getSelectionModel().select(searchAppts);
+        }
+        else {
+            appointmentsTable.setItems(AppointmentsDAO.getAllAppointments());
+        }
+    }
+
+     */
 
 
     /**

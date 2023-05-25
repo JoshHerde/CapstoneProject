@@ -315,4 +315,33 @@ public class AppointmentsDAO {
         }
         return null;
     }
+
+    public static Appointments lookupApptID(int dbAppointmentID) {
+
+        Appointments appointments = new Appointments();
+
+        try {
+            String sql = "SELECT * FROM appointments WHERE Appointment_ID = ?";
+            PreparedStatement ps = DBConnection.getConnection().prepareStatement(sql);
+            ps.setInt(1, dbAppointmentID);
+            ResultSet rs = ps.executeQuery();
+
+            rs.next();
+            appointments.setAppointmentID(rs.getInt("Appointment_ID"));
+            appointments.setTitle(rs.getString("Title"));
+            appointments.setDescription(rs.getString("Description"));
+            appointments.setLocation(rs.getString("Location"));
+            appointments.setType(rs.getString("Type"));
+            appointments.setStartTime(rs.getTimestamp("Start").toLocalDateTime());
+            appointments.setEndTime(rs.getTimestamp("End").toLocalDateTime());
+            appointments.setCustomerID(rs.getInt("Customer_ID"));
+            appointments.setUserID(rs.getInt("User_ID"));
+            appointments.setContactID(rs.getInt("Contact_ID"));
+
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return appointments;
+    }
 }
