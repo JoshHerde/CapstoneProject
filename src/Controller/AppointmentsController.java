@@ -228,21 +228,6 @@ public class AppointmentsController implements Initializable {
         appointmentsTable.setItems(searchedAppointments);
     }
 
-    /*
-    @FXML void apptSearchClicked(ActionEvent actionEvent) {
-        String searchString = apptSearch.getText();
-        if (searchString.matches("\\d+")) {
-            int id = Integer.parseInt(searchString);
-            Appointments searchAppts = AppointmentsDAO.lookupApptID(id);
-            appointmentsTable.getSelectionModel().select(searchAppts);
-        }
-        else {
-            appointmentsTable.setItems(AppointmentsDAO.getAllAppointments());
-        }
-    }
-
-     */
-
 
     /**
      * Initializes the controller.

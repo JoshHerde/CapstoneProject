@@ -4,10 +4,8 @@ import DAO_DBAccess.AppointmentsDAO;
 import DAO_DBAccess.ContactsDAO;
 import DAO_DBAccess.CustomersDAO;
 import DAO_DBAccess.UsersDAO;
-import Model.Appointments;
-import Model.Contacts;
-import Model.Customers;
-import Model.Users;
+import Main.Main;
+import Model.*;
 import Utilities.TimeHelper;
 import Utilities.ValidAppointment;
 import javafx.collections.FXCollections;
@@ -25,11 +23,14 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import javax.swing.*;
 import java.io.IOException;
+import java.lang.reflect.Type;
 import java.net.URL;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 /**
@@ -48,11 +49,13 @@ public class AddAppointmentController implements Initializable {
     @FXML private ComboBox<Contacts> contactComboBox;
     @FXML private ComboBox<Customers> customerIDComboBox;
     @FXML private ComboBox<Users> userIDComboBox;
+    //@FXML private ComboBox<String> typeComboBox;
 
 
     private ObservableList<Contacts> contactList = FXCollections.observableArrayList();
     private ObservableList<Customers> customersList = FXCollections.observableArrayList();
     private ObservableList<Users> usersList = FXCollections.observableArrayList();
+
 
 
     /**
@@ -66,6 +69,7 @@ public class AddAppointmentController implements Initializable {
             String title = apptTitleTextField.getText();
             String description = apptDescTextField.getText();
             String location = apptLocTextField.getText();
+
             String type = apptTypeTextField.getText();
 
             if (apptTitleTextField.getText().isBlank() || apptDescTextField.getText().isBlank() || apptLocTextField.getText().isBlank() || apptTypeTextField.getText().isBlank()) {
@@ -184,6 +188,7 @@ public class AddAppointmentController implements Initializable {
         endTimeComboBox.setItems(TimeHelper.getEndTimes());
 
         try {
+
             contactList = ContactsDAO.getAllContacts();
             contactComboBox.setItems(contactList);
 

@@ -15,7 +15,7 @@
       <Label layoutX="56.0" layoutY="170.0" text="Title" />
       <Label layoutX="56.0" layoutY="214.0" text="Description" />
       <Label layoutX="56.0" layoutY="341.0" text="Type" />
-      <Label layoutX="56.0" layoutY="304.0" text="Contact" />
+      <Label layoutX="56.0" layoutY="304.0" text="Call Taker" />
       <Label layoutX="56.0" layoutY="260.0" text="Location" />
       <Label layoutX="19.0" layoutY="384.0" text="Start Date" />
       <Label layoutX="249.0" layoutY="384.0" text="Start Time" />
@@ -31,7 +31,10 @@
       <TextField fx:id="apptTypeTextField" layoutX="126.0" layoutY="337.0" prefHeight="25.0" prefWidth="340.0" />
       <DatePicker fx:id="startDatePicker" layoutX="78.0" layoutY="380.0" prefHeight="25.0" prefWidth="150.0" />
       <DatePicker fx:id="endDatePicker" layoutX="78.0" layoutY="419.0" prefHeight="25.0" prefWidth="150.0" />
-      <Button layoutX="358.0" layoutY="553.0" mnemonicParsing="false" onAction="#saveButtonClicked" text="Save" />
+      <Button layoutX="358.0" layoutY="553.0" mnemonicParsing="false" onAction="#saveButtonClicked" style="-fx-background-color: #b7ffbf; -fx-border-color: black;" text="Save">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
       <Button layoutX="414.0" layoutY="553.0" mnemonicParsing="false" onAction="#cancelButtonClicked" text="Cancel" />
       <ComboBox fx:id="startTimeComboBox" layoutX="307.0" layoutY="380.0" prefHeight="25.0" prefWidth="162.0" />
       <ComboBox fx:id="endTimeComboBox" layoutX="307.0" layoutY="419.0" prefHeight="25.0" prefWidth="162.0" />

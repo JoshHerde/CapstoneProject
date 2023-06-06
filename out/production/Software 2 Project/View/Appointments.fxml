@@ -12,13 +12,13 @@
          </font></Label>
       <TableView fx:id="appointmentsTable" layoutX="33.0" layoutY="125.0" prefHeight="421.0" prefWidth="1039.0">
         <columns>
-          <TableColumn fx:id="idCol" prefWidth="75.0" text="ID" />
-          <TableColumn fx:id="titleCol" prefWidth="94.0" text="Title" />
-            <TableColumn fx:id="descCol" prefWidth="183.0" text="Description" />
-            <TableColumn fx:id="locCol" prefWidth="104.0" text="Location" />
-            <TableColumn fx:id="contactCol" prefWidth="104.0" text="Contact" />
-            <TableColumn fx:id="typeCol" prefWidth="142.0" text="Type" />
-            <TableColumn fx:id="startCol" prefWidth="84.0" text="Start" />
+          <TableColumn fx:id="idCol" prefWidth="58.0" text="ID" />
+          <TableColumn fx:id="titleCol" prefWidth="99.0" text="Title" />
+            <TableColumn fx:id="descCol" prefWidth="195.0" text="Description" />
+            <TableColumn fx:id="locCol" prefWidth="129.0" text="Location" />
+            <TableColumn fx:id="contactCol" prefWidth="69.0" text="Call Taker" />
+            <TableColumn fx:id="typeCol" prefWidth="129.0" text="Type" />
+            <TableColumn fx:id="startCol" prefWidth="107.0" text="Start" />
             <TableColumn fx:id="endCol" prefWidth="86.0" text="End" />
             <TableColumn fx:id="customerIdCol" prefWidth="95.0" text="Customer ID" />
             <TableColumn fx:id="userIdCol" prefWidth="71.0" text="User ID" />
@@ -44,7 +44,10 @@
       </Button>
       <Button layoutX="744.0" layoutY="45.0" mnemonicParsing="false" onAction="#editAppointmentClicked" prefHeight="25.0" prefWidth="143.0" text="Edit Appointment" />
       <Button layoutX="744.0" layoutY="84.0" mnemonicParsing="false" onAction="#deleteAppointmentClicked" prefHeight="25.0" prefWidth="143.0" text="Delete Appointment" />
-      <Button layoutX="1019.0" layoutY="561.0" mnemonicParsing="false" onAction="#exitButtonClicked" prefHeight="25.0" prefWidth="53.0" text="Exit" />
+      <Button layoutX="1019.0" layoutY="561.0" mnemonicParsing="false" onAction="#exitButtonClicked" prefHeight="25.0" prefWidth="53.0" style="-fx-background-color: #ff3632; -fx-border-color: black;" text="Exit">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
       <Button layoutX="33.0" layoutY="558.0" mnemonicParsing="false" onAction="#customerButtonClicked" prefHeight="25.0" prefWidth="143.0" style="-fx-background-color: #b7ffbf; -fx-border-color: black;" text="Customers">
          <font>
             <Font name="System Bold" size="14.0" />

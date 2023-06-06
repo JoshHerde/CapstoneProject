@@ -14,8 +14,8 @@
       <Button layoutX="489.0" layoutY="340.0" mnemonicParsing="false" onAction="#backButtonClicked" prefHeight="40.0" prefWidth="78.0" text="Back" />
       <Label layoutX="52.0" layoutY="76.0" text="Total Number of Appointments by Type and Month:" />
       <Button fx:id="GoButton1" layoutX="352.0" layoutY="72.0" mnemonicParsing="false" onAction="#goButton1Clicked" prefHeight="25.0" prefWidth="47.0" text="GO" />
-      <Label layoutX="52.0" layoutY="147.0" text="Schedule for each Contact:" />
-      <Button layoutX="226.0" layoutY="143.0" mnemonicParsing="false" onAction="#goButton2Clicked" prefHeight="25.0" prefWidth="47.0" text="GO" />
+      <Label layoutX="52.0" layoutY="147.0" text="Appointments made by each Call Taker:" />
+      <Button layoutX="273.0" layoutY="143.0" mnemonicParsing="false" onAction="#goButton2Clicked" prefHeight="25.0" prefWidth="47.0" text="GO" />
       <Label layoutX="52.0" layoutY="228.0" text="Total Customers by Country:" />
       <Button fx:id="GoButton3" layoutX="226.0" layoutY="224.0" mnemonicParsing="false" onAction="#goButton3Clicked" prefHeight="25.0" prefWidth="47.0" text="GO" />
    </children>
