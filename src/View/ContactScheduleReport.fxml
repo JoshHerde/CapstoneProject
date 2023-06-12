@@ -22,6 +22,6 @@
         </columns>
       </TableView>
       <Button layoutX="717.0" layoutY="461.0" mnemonicParsing="false" onAction="#backButtonClicked" text="Back" />
-      <ComboBox fx:id="contactComboBox" layoutX="536.0" layoutY="39.0" onAction="#contactComboClicked" prefWidth="150.0" promptText="Select Contact" />
+      <ComboBox fx:id="contactComboBox" layoutX="536.0" layoutY="39.0" onAction="#contactComboClicked" prefWidth="150.0" promptText="Select Call Taker" />
    </children>
 </AnchorPane>

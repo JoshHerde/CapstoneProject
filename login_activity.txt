@@ -42,3 +42,10 @@ On this date and time: 06-06-2023 16:52, Username: test - successfully logged in
 On this date and time: 06-06-2023 16:56, Username: test - successfully logged in.
 On this date and time: 06-06-2023 16:57, Username: test - successfully logged in.
 On this date and time: 06-06-2023 18:03, Username: test - successfully logged in.
+On this date and time: 06-06-2023 20:03, Username: test - successfully logged in.
+On this date and time: 06-07-2023 19:46, Username: Username - was denied access.
+On this date and time: 06-07-2023 21:19, Username: test - successfully logged in.
+On this date and time: 06-08-2023 14:22, Username: test - successfully logged in.
+On this date and time: 06-08-2023 14:42, Username: test - successfully logged in.
+On this date and time: 06-12-2023 17:37, Username: admin - successfully logged in.
+On this date and time: 06-12-2023 17:46, Username: test - successfully logged in.
